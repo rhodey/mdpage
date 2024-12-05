@@ -1,0 +1,25 @@
+{
+  "name": "@rhodey/mdpage",
+  "version": "1.0.0",
+  "description": "markdown to html",
+  "license": "MIT",
+  "main": "index.js",
+  "bin": {
+    "mdpage": "bin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rhodey/mdpage.git"
+  },
+  "homepage": "https://github.com/rhodey/mdpage",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "markdown-it": "^14.1.0",
+    "jsdom": "^25.0.1"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "markdown",
+    "html"
+  ]
+}
