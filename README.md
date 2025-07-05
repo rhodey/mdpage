@@ -14,4 +14,6 @@ mdpage README.md -i index.html -s "#text" > readme.html
 ```
 
 ## License
+Copyright 2025 - mike@rhodey.org
+
 MIT
