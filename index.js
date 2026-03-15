@@ -1,10 +1,20 @@
 const fs = require('fs')
 const path = require('path')
 const markdownit = require('markdown-it')
-const md = markdownit()
 const JSDOM = require('jsdom').JSDOM
 
-module.exports = async function render(argv) {
+module.exports = function render(argv) {
+  // config markdown
+  const config = { ...argv }
+  delete config['_']
+  delete config['i']
+  delete config['s']
+  Object.keys(config).forEach((key) => {
+    config[key] = config[key] === 'true' ? true : config[key]
+    config[key] = config[key] === 'false' ? false : config[key]
+  })
+  const md = markdownit(config)
+
   // parse markdown
   let input = argv._[0]
   input = fs.readFileSync(input, 'utf8')
